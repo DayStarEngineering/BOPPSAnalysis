@@ -1,0 +1,12 @@
+[submodule "predictiveFilter"]
+	path = predictiveFilter
+	url = git@github.com:DayStarEngineering/predictiveFilter.git
+[submodule "Centroid"]
+	path = Centroid
+	url = git@github.com:DayStarEngineering/Centroid.git
+[submodule "PyDyGraphs"]
+	path = PyDyGraphs
+	url = git@github.com:DayStarEngineering/PyDyGraphs.git
+[submodule "ZD-Utils"]
+	path = ZD_Utils
+	url = git@github.com:ZachDischner/ZD-Utils.git

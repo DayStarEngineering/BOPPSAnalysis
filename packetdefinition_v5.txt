@@ -1,0 +1,78 @@
+##################################################
+##################################################
+# Packet Definition Info:
+##################################################
+##################################################
+# Packet Definition Format Example:
+# startbyte-endbyte, Data Name String, Data Type (FLOAT, DOUBLE, UINT16, etc), Unit String, Optional Operation (ie. x*15, make sure to use x as variable name!)
+# ... repeat for all data values in  packet ...
+# 
+##################################################
+##################################################
+
+# Total: 294 bytes:
+# Controllaw variables:
+0-7, Loop Iter, UINT64, x
+8-15, Timestamp, UINT64,
+8-15, Time, UINT64, float(x)/1e9
+16-23, Initial X, DOUBLE,
+24-31, Initial Y, DOUBLE,
+32-39, Centroid X, DOUBLE,
+40-47, Centroid Y, DOUBLE,
+48-55, Prediction X, DOUBLE,
+56-63, Prediction Y, DOUBLE,
+64-67, Az Poly Points, UINT32, 
+68-71, El Poly Points, UINT32,
+
+# Centroid variables:
+72-79, SigmaPeak, DOUBLE,
+80-87, SigmaReject, DOUBLE,
+88-95, Oblongness, DOUBLE,
+96-103, MinPixThresh, UINT64,
+104-111, MaxPixThresh, UINT64,
+112-115, GridStepSize, UINT32,
+116-123, SubwindowFactor, DOUBLE,
+124, RejectOnEdge, BOOL,
+125, RejectSaturated, BOOL,
+#52-55, Xlen, UINT16,
+#52-55, Ylen, UINT16,
+#52-55, NumPixels, UINT64,
+126-133, BrightPixelCount, UINT64,
+134-141, NumBackgroundPixels, UINT64,
+142-149, NumGoodPix, UINT64,
+150-157, Mean, DOUBLE,
+158-165, Std, DOUBLE,
+166-173, Limit, INT64,
+174-181, PeakLimit, INT64,
+182-189, NumStarsFound, INT64,
+190-197, FalseStarCount, INT64,
+198-205, NumBlobSaturated, INT64,
+206-213, NumBlobLowPeak, INT64,
+214-221, NumBlobTooSmall, INT64,
+222-229, NumBlobTooBig, INT64,
+230-237, NumBlobTooOblong, INT64,
+238-245, NumBlobOnEdge, INT64,
+#52-55, XCenterBrightest, DOUBLE,
+#52-55, YCenterBrightest, DOUBLE,
+246-253, WidthBrightest, DOUBLE,
+254-261, HeightBrightest, DOUBLE,
+262-269, NumPixBrightest, DOUBLE,
+270-277, RoundnessBrightest, DOUBLE,
+278-285, MaxValBrightest, DOUBLE,
+286-287, SubWinLeft, UINT16,
+288-289, SubWinTop, UINT16,
+290-291, SubWinRight, UINT16,
+292-293, SubWinBottom, UINT16,
+#52-55, XCentroid, DOUBLE,
+#52-55, YCentroid, DOUBLE,
+#52-55, XCentroid2, DOUBLE,
+#52-55, YCentroid2, DOUBLE,
+294-301, ICentroid, DOUBLE,
+302-309, SigmaPeak, DOUBLE,
+310-313, LostStarCount, UINT32,
+314-321, IWBrightest, DOUBLE,
+322-325, Az Filter Points, UINT32,
+326-329, El Filter Points, UINT32,
+330-333, Az Num Points, UINT32,
+334-337, El Num Points, UINT32,
+
