@@ -38,8 +38,12 @@ import binaryparser as bp
 
 ## Import the PyPredictiveFilter Wrapper
 # Like `path.append('../')` but works everywhere
-# sys.path.append("../")
-# sys.path.append(string.join(os.path.abspath(__file__).split("/")[0:-2],"/"))
+sys.path.append("./Centroid")
+sys.path.append("./predictiveFilter")
+print sys.path
+sys.path.append(string.join([os.path.abspath(__file__),"Centroid"],"/"))
+sys.path.append(string.join([os.path.abspath(__file__),"predictiveFilter"],"/"))
+print sys.path
 from predictiveFilter import PyPredictiveFilter as pypfilt
 
 ###### Some globally used variables

@@ -7,11 +7,22 @@ else
         PATH=`pwd`/mit_linux:`pwd`/fsmcontroller:`pwd`/clm
 fi
 
-# Update library path:
-if [ -n "$LD_LIBRARY_PATH" ]; then
-        LD_LIBRARY_PATH=`pwd`/predictivefFilter:`pwd`/centroid:${LD_LIBRARY_PATH}
+# Update library path (different for mac and linux...):
+OS=`uname`
+# It would be nice to do this more elegantly...
+if [[ "$OS" == 'Darwin' ]]; then
+    echo "You're on a mac! So your dynamic library variable is: DYLD_LIBRARY_PATH"
+    if [ -n "$DYLD_LIBRARY_PATH" ]; then
+        $DYLD_LIBRARY_PATH=`pwd`/predictiveFilter:`pwd`/Centroid:${$DYLD_LIBRARY_PATH}
+    else
+        export DYLD_LIBRARY_PATH=`pwd`/predictiveFilter:`pwd`/Centroid
+    fi
 else
-	LD_LIBRARY_PATH=`pwd`/predictivefFilter:`pwd`/centroid
+    if [ -n "$LD_LIBRARY_PATH" ]; then
+        $LD_LIBRARY_PATH=`pwd`/predictiveFilter:`pwd`/Centroid:${$LD_LIBRARY_PATH}
+    else
+        export LD_LIBRARY_PATH=`pwd`/predictiveFilter:`pwd`/Centroid
+    fi
 fi
 
 # Ipython Notebook Set-up:
