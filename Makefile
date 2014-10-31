@@ -8,7 +8,7 @@ all: dep
 
 dep:
 	make -C predictiveFilter
-	make -C Centroid
+	#make -C Centroid
 	
 clean:
 	make -C Centroid clean

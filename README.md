@@ -32,4 +32,4 @@ Once downloaded, start your analysis in two steps:
     cd dir/to/repo
     source ./setEnv.sh
     make clean && make
-    ipython --notebook ControlLawAnalysis.ipynb
+    ipython notebook ControlLawAnalysis.ipynb
