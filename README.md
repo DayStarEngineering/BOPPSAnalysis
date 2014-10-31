@@ -14,6 +14,12 @@ Perform a recursive clone of this repo in order to work locally.
 
     git clone --recursive git@github.com:DayStarEngineering/BOPPSAnalysis.git
 
+
+## Requires FFTW!!! http://www.fftw.org/
+
+    brew install fftw
+
+    
 Once downloaded, start your analysis in two steps:
 
     cd dir/to/repo
