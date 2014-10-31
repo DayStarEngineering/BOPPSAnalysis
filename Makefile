@@ -1,8 +1,8 @@
 # Compile Flags:
 CPP = /usr/bin/g++-4.7
-CPPFLAGS = -O3 setConstrainedParam -m64 -pipe -c -Wall -Wextra
-LIBFLAGS = -O3 setConstrainedParam -m64 -pipe -c -Wall -Wextra -fPIC
-LDFLAGS = setConstrainedParam -m64 -pipe -Wall -Wextra -lpthread -pthread -lrt
+CPPFLAGS = -O3  -m64 -pipe -c -Wall -Wextra
+LIBFLAGS = -O3  -m64 -pipe -c -Wall -Wextra -fPIC
+LDFLAGS =  -m64 -pipe -Wall -Wextra -lpthread -pthread -lrt
 
 all: dep  
 
