@@ -15,9 +15,16 @@ Perform a recursive clone of this repo in order to work locally.
     git clone --recursive git@github.com:DayStarEngineering/BOPPSAnalysis.git
 
 
-## Requires FFTW!!! http://www.fftw.org/
+## Requirements:
+FFTW!!! http://www.fftw.org/
 
     brew install fftw
+
+cython-distutils
+
+    pip install cython-distutils
+
+    
 
     
 Once downloaded, start your analysis in two steps:
